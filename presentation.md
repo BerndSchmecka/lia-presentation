@@ -28,7 +28,7 @@ using System.IO;
 
 public class Program {
   public static void Main(string[] args){
-    const string test_id = "test@myteamspeak.com"
+    const string test_id = "test@myteamspeak.com";
     Console.WriteLine($"Matrix ID for {test_id}: {getMatrixIDfromUsertag(test_id)}");
   }
   
@@ -57,4 +57,15 @@ public class Program {
         }
 }
 ```
-@LIA.eval(`["main.cs"]`, `mono main.cs`, `mono main.exe`)
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+</Project>
+```
+@LIA.eval(`["Program.cs", "project.csproj"]`, `dotnet build -nologo`, `dotnet run -nologo`)
