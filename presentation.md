@@ -29,8 +29,12 @@ using System.Net;
 
 public class Program {
   public static void Main(string[] args){
+  try {
     const string test_id = "test@myteamspeak.com";
     Console.WriteLine($"Matrix ID for {test_id}: {getMatrixIDfromUsertag(test_id)}");
+    } catch (Exception ex) {
+      Console.WriteLine($"An error occured: {ex.Message}");
+    }
   }
   
   public static string getMatrixIDfromUsertag(string usertag)
