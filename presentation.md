@@ -16,3 +16,16 @@ comment:  My presentation about a particular
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/BerndSchmecka/lia-presentation/main/presentation.md)
 
 # Presentation
+
+## Example code
+
+```csharp Write/WriteLine
+using System;
+
+public class Program {
+  public static void Main(string[] args){
+    Console.WriteLine("Test");
+  }
+}
+```
+@LIA.eval(`["main.cs"]`, `mono main.cs`, `mono main.exe`)
