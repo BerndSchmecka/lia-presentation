@@ -9,6 +9,8 @@ language: en
 
 narrator: US English Female
 
+import: https://github.com/liascript/CodeRunner
+
 comment:  My presentation about a particular
           code snippet.
 -->
