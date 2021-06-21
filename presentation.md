@@ -23,11 +23,38 @@ comment:  My presentation about a particular
 
 ```csharp Write/WriteLine
 using System;
+using Newtonsoft.Json;
+using System.IO;
 
 public class Program {
   public static void Main(string[] args){
-    Console.WriteLine("Test");
+    const string test_id = "test@myteamspeak.com"
+    Console.WriteLine($"Matrix ID for {test_id}: {getMatrixIDfromUsertag(test_id)}");
   }
+  
+  public static string getMatrixIDfromUsertag(string usertag)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://35.195.56.213:8008/lookup");
+            request.Method = "POST";
+            request.ContentType = "application/json";
+
+            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+            {
+                string json = "{\"tsChatId\":\"" + usertag + "\"}";
+
+                streamWriter.Write(json);
+            }
+
+            var httpResponse = (HttpWebResponse)request.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+
+                dynamic de_ser_obj = JsonConvert.DeserializeObject(result);
+
+                return de_ser_obj.matrixId;
+            }
+        }
 }
 ```
 @LIA.eval(`["main.cs"]`, `mono main.cs`, `mono main.exe`)
