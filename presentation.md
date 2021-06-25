@@ -75,7 +75,9 @@ You can get a list of all tags:
     GET /tags
 ```
 
-```javascript Small JavaScript Fragment
+I wrote the following small JavaScript Snippet to quickly get a list of tags. Since this isn't the main focus of this presentation, I won't go into detail here.
+
+```javascript Small JavaScript Snippet
 (() => { 
 	var req = new XMLHttpRequest();
   req.open("GET", "https://api.quotable.io/tags");
@@ -91,10 +93,13 @@ You can get a list of all tags:
   };
   req.send();
 })();
+'List of tags:';
 ```
 <script>@input</script>
 
-## Example code
+## Example Program (C#)
+
+This is the main part of this presentation: A small C# Program I wrote to fetch quotes from the API. It also supports filtering for tags.
 
 ```csharp Program.cs
 using System;
@@ -162,3 +167,37 @@ namespace sample_code
 </Project>
 ```
 @LIA.eval(`["Program.cs", "project.csproj"]`, `dotnet build -nologo`, `dotnet run -nologo`)
+
+## Random Quote
+
+```javascript JS Snippet embedded in Homepage
+  var req = new XMLHttpRequest();
+  req.open("GET", "https://api.quotable.io/random");
+  req.onreadystatechange = function() {
+  	if(req.readyState === 4){
+      if(req.status === 200){
+        var quote = JSON.parse(req.responseText);
+        document.getElementById('quote-text').innerHTML = quote.content;
+        document.getElementById('quote-author').innerHTML = quote.author;
+      }
+    }
+  };
+  req.send();
+'Pls ignore this console output ^^';
+```
+<script>
+@input
+</script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<h1 style="font-family: monospace; font-size: 40pt;">Welcome to my Homepage!</h1>
+<p>Welcome to my Homepage! To greet you, here's a random quote:</p><p style="font-family: Lobster; font-size: 20pt;">"<span id="quote-text">Quote</span>"</p>
+<p>— <span id="quote-author" style="font-family: Lobster; font-size: 12pt;">Author</span></p>
+
+## The End
+{{0}}
+That was it, I hope you liked it :D
+
+{{1}}
+Here's the obligatory "funny" GIF:
+![Funny GIF](https://media.giphy.com/media/KPTCBr8piZ51m/giphy.gif)
