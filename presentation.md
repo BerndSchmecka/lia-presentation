@@ -11,6 +11,8 @@ narrator: US English Female
 
 import: https://github.com/liascript/CodeRunner
 
+icon: https://avatars.githubusercontent.com/u/35659790?v=4
+
 comment:  My presentation about a particular
           code snippet.
 -->
