@@ -171,6 +171,7 @@ namespace sample_code
 ## Random Quote
 
 ```javascript JS Snippet embedded in Homepage
+(() => {
   var req = new XMLHttpRequest();
   req.open("GET", "https://api.quotable.io/random");
   req.onreadystatechange = function() {
@@ -183,6 +184,7 @@ namespace sample_code
     }
   };
   req.send();
+})();
 'Pls ignore this console output ^^';
 ```
 <script>
