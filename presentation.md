@@ -195,10 +195,7 @@ namespace sample_code
 <p>— <span id="quote-author" style="font-family: Lobster; font-size: 12pt;">Author</span></p>
 
 ## The End
-{{0}}
-That was it, I hope you liked it :D
+{{0}} That was it, I hope you liked it :D
 
-{{1}}
-Here's the obligatory "funny" GIF:
-
+{{1}} Here's the obligatory "funny" GIF:
 ![Funny GIF](https://media.giphy.com/media/KPTCBr8piZ51m/giphy.gif)
