@@ -1,28 +1,4 @@
-<!--
-author:   `BerndSchmecka`
-
-email:    business@dunkelmann.eu
-
-version:  0.0.1
-
-language: en
-
-narrator: US English Female
-
-import: https://github.com/liascript/CodeRunner
-
-comment:  My presentation about a particular
-          code snippet.
--->
-
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/BerndSchmecka/lia-presentation/main/presentation.md)
-
-# Presentation
-
-## Example code
-
-```csharp Program.cs
-using System;
+﻿using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Net;
@@ -72,18 +48,3 @@ namespace sample_code
         }
     }
 }
-```
-```xml project.csproj
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>sample_code</RootNamespace>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-</Project>
-```
-@LIA.eval(`["Program.cs", "project.csproj"]`, `dotnet build -nologo`, `dotnet run -nologo`)
