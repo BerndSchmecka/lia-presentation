@@ -11,7 +11,7 @@ narrator: US English Female
 
 import: https://github.com/liascript/CodeRunner
 
-icon: https://avatars.githubusercontent.com/u/35659790?v=4
+icon: https://raw.githubusercontent.com/BerndSchmecka/lia-presentation/main/opa_circle.png
 
 comment:  My presentation about a particular
           code snippet.
