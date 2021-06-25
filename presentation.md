@@ -88,7 +88,7 @@ You can get a list of all tags:
         }
       }
     }
-  }
+  };
   req.send();
 })();
 ```
