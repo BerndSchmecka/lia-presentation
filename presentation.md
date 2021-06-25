@@ -19,6 +19,81 @@ comment:  My presentation about a particular
 
 # Presentation
 
+Hello!
+
+My presentation is about a small program I wrote.
+It uses an API to get Random Quotes.
+
+Have fun!
+
+## The API
+
+I'm using an API called `Quotable`. It can be found [here](https://github.com/lukePeavey/quotable).
+
+It is reachable on `api.quotable.io` and needs to be called as following:
+
+```HTTP Get random Quote
+    GET /random
+```
+
+The response is in JSON format:
+
+```JSON The Response (JSON)
+{
+  _id: string
+  // The quotation text
+  content: string
+  // The full name of the author
+  author: string
+  // The `slug` of the quote author
+  authorSlug: string
+  // The length of quote (number of characters)
+  length: number
+  // An array of tag names for this quote
+  tags: string[]
+}
+```
+
+You can also filter for specific tags:
+
+```HTTP
+    GET /random?tags=technology,famous-quotes
+```
+
+or
+
+```HTTP
+    GET /random?tags=history|civil-rights
+```
+
+*The examples are from the [GitHub-Repo](https://github.com/lukePeavey/quotable) of the API*
+
+### List of Tags
+You can get a list of all tags:
+
+```HTTP
+    GET /tags
+```
+
+```javascript Small JavaScript Fragment
+(() => { 
+	var req = new XMLHttpRequest();
+  req.open("GET", "https://api.quotable.io/tags");
+  req.onreadystatechange = function() {
+  	if(req.readyState === 4){
+      if(req.status === 200){
+        var tags = JSON.parse(req.responseText);
+        for(var i = 0; i<tags.length; i++){
+          console.log(tags[i].name);
+        }
+      }
+    }
+  }
+  req.send();
+})();
+```
+<script>@input</script>
+
 ## Example code
 
 ```csharp Program.cs
