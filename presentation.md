@@ -71,7 +71,7 @@ or
 ### List of Tags
 You can get a list of all tags:
 
-```HTTP
+```HTTP Get a List of tags
     GET /tags
 ```
 
