@@ -200,4 +200,5 @@ That was it, I hope you liked it :D
 
 {{1}}
 Here's the obligatory "funny" GIF:
+
 ![Funny GIF](https://media.giphy.com/media/KPTCBr8piZ51m/giphy.gif)
