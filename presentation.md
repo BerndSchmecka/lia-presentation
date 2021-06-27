@@ -103,8 +103,6 @@ This is the main part of this presentation: A small C# Program I wrote to fetch 
 
 ```csharp Program.cs
 using System;
-using System.Text;
-using System.Collections.Generic;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json;
@@ -148,6 +146,8 @@ namespace sample_code
                         Console.WriteLine($"Error {response.StatusCode} returned: {errorResponse}");
                     }
                 }
+            } catch (Exception e){
+                Console.WriteLine($"An unknown error occured: {e.Message}");
             }
         }
     }
