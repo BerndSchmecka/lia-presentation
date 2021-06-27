@@ -11,6 +11,8 @@ narrator: US English Female
 
 import: https://github.com/liascript/CodeRunner
 
+icon: https://raw.githubusercontent.com/BerndSchmecka/lia-presentation/main/opa_circle.png
+
 comment:  My presentation about a particular
           code snippet.
 -->
@@ -171,6 +173,7 @@ namespace sample_code
 ## Random Quote
 
 ```javascript JS Snippet embedded in Homepage
+(() => {
   var req = new XMLHttpRequest();
   req.open("GET", "https://api.quotable.io/random");
   req.onreadystatechange = function() {
@@ -183,6 +186,7 @@ namespace sample_code
     }
   };
   req.send();
+})();
 'Pls ignore this console output ^^';
 ```
 <script>
